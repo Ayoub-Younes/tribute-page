@@ -192,7 +192,4 @@ section .info ul {
     margin-bottom: -3vw;
   }
 
-  li {
-    text-indent: -1vw; /* Shift text left */
-  }
 }
