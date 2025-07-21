@@ -1,10 +1,3 @@
-:root {
-  --color-h1: #222;
-  --color-h2: #230436;
-  --color-hover: #7c1dc9;
-  --color-p1: #575757;
-  --color-p: #4e4e4e;}
-
 *{
   box-sizing:border-box;
 }
