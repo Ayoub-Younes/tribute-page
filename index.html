@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>Nikola Tesla Tribute Page</title>
+</head>
+<body>
+  <img id="background" src="Images/quote-background.jpg" alt="background">
+  <main id="main" style="display: none;">
+    <h1 id="title">Nikola Tesla</h1>
+    <figure id="img-div">
+      <img src="Images/nikola-tesla-hero.jpg" id="image" alt="nikola-tesla-hero">
+      <figcaption id="img-caption">Nikola Tesla was a Serbian-American inventor, electrical engineer, mechanical engineer, and futurist, best known for his contributions to the design of the modern alternating current (AC) electrical system. He also invented the Tesla coil and made significant contributions to wireless communication</figcaption>
+    </figure>
+
+    <section id="birth-education">
+      <div class="info">
+        <p class="title">Early Life and Education:</p>
+        <ul>
+          <li>Born on July 10, 1856, in Smiljan, Austrian Empire (now Croatia).</li>
+          <li>His father was an Orthodox priest, and his mother was the daughter of a priest and known for her inventions. </li>
+          <li>Tesla studied at the Realschule, Karlstadt, the Polytechnic Institute in Graz, and the University of Prague. </li>
+          <li>He initially intended to specialize in physics and mathematics, but became fascinated with electricity. </li>
+        </ul>
+      </div>
+      <div class="container">
+        <img src="Images/tesla-kid.jpg" alt="tesla-kid">
+      </div>
+
+    </section>
+
+      <img class="image-row sepia" src="Images/nikola-tesla-row-1.jpg" alt="row-background-1">
+
+    <section id="career-invention">
+      <div class="info">
+        <p class="title">Career and Inventions:</p>
+        <ul>
+          <li>Tesla began his career in Budapest at a telephone company.</li>
+          <li>He moved to the United States in 1884 and worked briefly for Thomas Edison.</li>
+          <li>He invented the Tesla coil, an induction coil used in radio technology.</li>
+          <li>He also developed the three-phase system of electric power transmission.</li>
+          <li>Tesla's inventions include an AC induction motor and various other electrical and mechanical devices.</li>
+          <li>He conducted experiments with wireless communication, including a wirelessly controlled boat.</li>
+        </ul>
+      </div>
+      <div class="container">
+        <img src="Images/nicola-tesla-invention.webp" alt="nicola-tesla-invention">
+      </div>
+    </section>
+    
+    <img class="image-row" src="Images/nikola-tesla-row-2.webp" alt="row-background-2">
+    
+    <section id="later-life">
+      <div class="info">
+        <p class="title">Later Life and Death:</p>
+        <ul>
+          <li>Tesla received over 300 patents for his inventions.</li>
+          <li>He continued to work on various projects throughout his life, including wireless power transmission.</li>
+          <li>Tesla's most significant contribution was the development of the AC electrical system.</li>
+          <li>Despite dying in relative obscurity, Tesla’s legacy grew immensely after his death, and today he is recognized as one of the greatest inventors and visionaries in history.</li>
+        </ul>
+      </div>
+      <div class="container">
+        <img src="Images/nikola-tesla-death-notice.webp" alt="nicola-tesla-death">
+      <div>
+    </section>
+    <img class="image-row quote" src="Images/nikoia-tesla-quote.png" alt="quote">
+    
+      <div class="footer">
+        <p id="tribute-info">Made with ❤️ in honor of Nikola Tesla</p>
+        <p class="tribute-link">For more in‑depth information about Nikola Tesla, visit the <a id="tribute-link" href="https://www.biography.com/inventors/nikola-tesla" target="_blank">Biography.com</a> Tesla page</p>
+      </div>
+  </main>
+</body>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const img = document.getElementById('image');
+    const mainContent = document.getElementById('main');
+
+    let imageLoaded = false;
+
+    function showContent() {
+      mainContent.style.display = 'flex';
+    }
+
+    if (img.complete) {
+      imageLoaded = true;
+      showContent();
+    } else {
+
+      img.onload = function() {
+        imageLoaded = true;
+        showContent();
+      };
+    }
+
+    // Fallback in case the image takes too long or fails to load
+    setTimeout(function() {
+      if (!imageLoaded) {
+        showContent();
+      }
+    }, 3000);
+  });
+
+</script>
+</html>

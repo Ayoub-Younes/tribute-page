@@ -1,0 +1,198 @@
+:root {
+  --color-h1: #222;
+  --color-h2: #230436;
+  --color-hover: #7c1dc9;
+  --color-p1: #575757;
+  --color-p: #4e4e4e;}
+
+*{
+  box-sizing:border-box;
+}
+
+
+#background {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  filter: grayscale(20%);
+  filter: brightness(1.75);
+  opacity: 0.1;
+}
+
+body {
+  font-size: 1em;
+  font-family: "DM Sans", Arial;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
+}
+
+h1 {
+  display: none;
+}
+
+#main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5vw;
+}
+
+#img-div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+#image {
+  width: 100%;
+  max-height: 75vh;
+  filter: grayscale(30%);
+}
+
+#img-caption {
+  font-weight: 500;
+  width: 80%;
+  text-align: center;
+  padding: 1em 0;
+  font-style: italic;
+  font-size: clamp(0.7rem, 2vw, 1.6em);
+  color: #333;
+}
+
+section {
+  margin: 2em;
+  display: flex;
+  gap: 2em;
+  font-size: clamp(0.7rem, 1.5vw, 1.3em);
+  align-items: stretch;
+  align-items: center;
+  justify-content: center;
+}
+
+#career-invention {
+  flex-direction: row-reverse;
+}
+
+#career-invention img {
+   border-radius: 100px 0 0 0;
+}
+
+section .info {
+  display: flex;
+  flex-direction: column;
+  flex: 1.2;
+  justify-content: center;
+}
+
+section .container {
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+section img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 0 0 100px 0;
+  object-fit: cover;
+  filter: sepia(0.2);
+}
+
+section .info p {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin: 0;
+}
+
+section .info ul {
+  padding: 0 2.5vw;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+}
+
+.image-row {
+  width: 100vw;
+  height: 25vw;
+  max-height: 400px;
+  object-fit: fill;
+  filter: grayscale(50%);
+}
+
+.sepia {
+  filter: sepia(0.5);
+}
+
+.footer {
+  margin-top: -4vw;
+  margin-bottom: 1em;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.footer p {
+  margin: 0;
+}
+.quote {
+  filter: sepia(0.5) grayscale(0.5);
+}
+
+#tribute-info {
+  color: #555;
+  font-family: "Special Elite";
+  font-weight: 600;
+  font-size: clamp(0.6rem, 1.5vw, 1.2em);
+}
+
+.tribute-link {
+  font-size: clamp(0.5rem, 1.5vw, 1.2em);
+}
+
+#tribute-link {
+  font-family: "Special Elite";
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  body {
+    line-height: 1.3;
+  }
+
+
+  section, #career-invention {
+    flex-direction: column;
+  }
+  section ul {
+    margin-left: 2vw;
+    font-size: clamp(0.7rem, 2.5vw, 1.6em);
+    list-style-position: outside;
+  }
+
+  section .info p {
+    font-size: clamp(1rem, 2.5vw, 1.6em);
+  }
+  #career-invention img, section img {
+   width: 70vw;
+   min-width: 300px;
+   border-radius: 0
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  #img-div {
+    margin-bottom: -3vw;
+  }
+
+  li {
+    text-indent: -1vw; /* Shift text left */
+  }
+}
